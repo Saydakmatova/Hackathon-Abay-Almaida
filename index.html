@@ -7,46 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <h1>Hello</h1>
     <div class="container">
         <div class="add-block">
             <form action="" class="add-form">
                 <input type="text" class="form-control inp-name" placeholder="Enter name...">
                 <input type="text" class="form-control inp-surname" placeholder="Enter surname...">
                 <input type="number" class="form-control inp-phone" placeholder="Enter phone number...">
-                <input type="text" class="form-control inp-week-kpi" placeholder="Enter weekly KPI">
-                <input type="text" class="form-control inp-month-kpi" placeholder="Enter monthly KPI">
-                <input type="text" class="form-control inp-image" placeholder="Enter image URL">
+                <input type="number" class="form-control inp-js" placeholder="Enter Test JavaScript">
+                <input type="number" class="form-control inp-jq" placeholder="Enter Test Jquery">
                 <button class="btn btn-primary">Add</button>
             </form>
         </div>
     </div>
 
-    <div class="students">
-        <div class="container">
-            <div class="students-item">
 
-            </div>
-        </div>
+    <div class="container">
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Phone number</th>
+                    <th>Test JavaScript</th>
+                    <th>Сделано</th>
+                    <th>Test Jquery</th>
+                    <th>Сделано</th>
+                    <th>Weekly KPI</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </table>
     </div>
 
-
-
-
-
-
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="main.js"></script>
 </body>
 

@@ -1,28 +1,26 @@
-const API = "http://localhost:8001/stydents";
+const API = "http://localhost:8000/stydents";
 let inpName = $('.inp-name');
 let inpSurname = $('.inp-surname');
 let inpPhone = $('.inp-phone');
-let inpWeekKpi = $('.inp-week-kpi');
-let inpMonthKpi = $('.inp-month-kpi');
-let inpImage = $('.inp-image');
+let inpJs = $('.inp-js');
+let inpJq = $('.inp-jq');
 let addForm = $('.add-form');
+let tbody = $('tbody');
 
 async function addStudents(event) {
     event.preventDefault();
     let nameVal = inpName.val().trim();
     let surnameVal = inpSurname.val().trim();
     let phoneVal = inpPhone.val().trim();
-    let weekKpiVal = inpWeekKpi.val().trim();
-    let monthKpiVal = inpMonthKpi.val().trim();
-    let imageVal = inpImage.val().trim();
+    let jsVal = inpJs.val().trim();
+    let jqVal = inpJq.val().trim();
 
     let newStudent = {
         name: nameVal,
         surname: surnameVal,
         phone: phoneVal,
-        week: weekKpiVal,
-        month: monthKpiVal,
-        image: imageVal,
+        js: jsVal,
+        jq: jqVal,
     }
     for( let key in newStudent) {
         if(!newStudent[key]) {
@@ -38,9 +36,8 @@ async function addStudents(event) {
     inpName.val('');
     inpSurname.val('');
     inpPhone.val('');
-    inpImage.val('');
-    inpMonthKpi.val('');
-    inpWeekKpi.val('');
+    inpJs.val('');
+    inpJq.val('');
 }
 addForm.on('submit', addStudents);
 
@@ -60,25 +57,19 @@ getStudenst(API);
 
 function render(students) {
     studentsList.html('');
-    students.forEach(item => {
-        studentsList.append(`
-            <div class="card students-div" style="width: 18rem;">
-            <div class="img-div">
-                <img src="${item.image}" class="card-img-top img-card" alt="...">
-            </div>
-            
-                <div class="card-body card-students">
-                    <h6 class="card-title">${item.name} ${item.surname}</h6>
-                    <h6>${item.phone}</h6>
-                    <h6 class="card-title">weekly KPI: ${item.week}</h6>
-                    <h6 class="card-title">monthly KPI:${item.month}</h6>
-                    <button class="btn-delete" id="${item.id}">
-                    <img src="https://cdn-icons.flaticon.com/png/512/3368/premium/3368864.png?token=exp=1640286457~hmac=9e3e76eee55d58ff2db2f3a462f67603"></button>
-                    <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn-edit" id="${item.id}">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2919/2919592.png">
-                    </button>
-                </div>
-            </div>
+    students.forEach((item, index) => {
+        tbody.append(`
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${item.name}</td>
+                        <td>${item.surname}</td>
+                        <td>${item.phone}</td>
+                        <td>100</td>
+                        <td>${item.js}</td>
+                        <td>100</td>
+                        <td>${item.jq}</td>
+                        <td>${+item.js + +item.jq}/200</td>
+                    </tr>
         `)
     })
 }
