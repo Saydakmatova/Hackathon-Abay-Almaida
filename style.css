@@ -53,3 +53,9 @@ body{
     font-family: 'Dancing Script', cursive;
     font-family: 'Fira Sans', sans-serif;
 }
+
+
+.input-search {
+    margin-right: 10px;
+    width: 20% !important;
+}
