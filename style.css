@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+    padding: 0;
+}
 .btn-delete,
 .btn-edit {
     background: transparent;
@@ -27,4 +31,25 @@
 .card-students{
     margin: 10px;
     padding: 10px;
+}
+
+nav {
+    background-color: #fff;
+}
+.pagination li.active {
+    background-color: #fff;
+}
+h1 {
+    margin: 0;
+    text-align: center;
+    font-family: 'Shizuru', cursive;
+    color: rgb(94, 255, 0);
+}
+.color-red{
+    color:red;
+}
+
+body{
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Fira Sans', sans-serif;
 }

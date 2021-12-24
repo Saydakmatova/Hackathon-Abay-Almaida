@@ -9,11 +9,15 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Shizuru&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
+    <h1>KPI, JS 15 GENATOLIY</h1>
     <div class="container">
         <div class="add-block">
             <form action="" class="add-form">
@@ -26,12 +30,18 @@
             </form>
         </div>
     </div>
-
+    <br>
+    <div class="container">
+        <div class="search-block">
+            <input type="text" class="form-control search-inp" placeholder="Live search...">
+        </div>
+    </div>
+    <br>
 
     <div class="container">
         <table class="striped">
             <thead>
-                <tr>
+                <tr style="background-color: #4ad295; color:aliceblue">
                     <th>№</th>
                     <th>Name</th>
                     <th>Surname</th>
@@ -41,13 +51,45 @@
                     <th>Test Jquery</th>
                     <th>Сделано</th>
                     <th>Weekly KPI</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
                 </tr>
             </thead>
-            <tbody>
-
+            <tbody class="students-list">
             </tbody>
         </table>
     </div>
+
+
+    <nav aria-label="Page navigation example" class="d-flex justify-content-center">
+        <ul class="pagination">
+        </ul>
+    </nav>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">редактировать легко </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="edit-form">
+                        <input type="text" class="form-control edit-inp-name">
+                        <input type="text" class="form-control edit-inp-surname">
+                        <input type="number" class="form-control edit-inp-phone">
+                        <input type="number" class="form-control edit-inp-js">
+                        <input type="number" class="form-control edit-inp-jq">
+                        <button class="btn btn-primary" type="submit">Save changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
