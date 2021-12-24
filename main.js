@@ -69,6 +69,17 @@ function render(students) {
                         <td>100</td>
                         <td>${item.jq}</td>
                         <td>${+item.js + +item.jq}/200</td>
+                        <td>
+                            <button class="btn-delete" id="${item.id}">
+                                <img src="https://cdn-icons-png.flaticon.com/512/6448/6448486.png">
+                            </button>
+                        </td>
+                        <td>
+                            <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn-edit" id="${item.id}">
+                            <img src="https://cdn-icons.flaticon.com/png/512/2280/premium/2280532.png?token=exp=1640326922~hmac=99029ba687c5582f561a1d0e28f2ca4b">
+                        </button>
+                        </td>
+                        
                     </tr>
         `)
     })
